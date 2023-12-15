@@ -80,6 +80,12 @@ nav ul li:hover::after{
     height: 100%;
 }
 
+img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+  }
+
 .floating-container {
 	position: fixed;
 	width: 100px;
