@@ -119,7 +119,7 @@ img{
 
   .floating-container:hover {
 	position:fixed;
-	height: 410px;
+	height: 350px;
 	width: 70px;
   }
 
