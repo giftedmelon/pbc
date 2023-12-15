@@ -53,6 +53,24 @@
     
 </body>
 <footer>
+    <div class="toggle-switch" id="toggleSwitch" onclick="toggleContent()">
+        <label class="switch">
+          <input type="checkbox">
+          <span class="slider round"></span>
+        </label>
+        <span id="modeText">Edit Mode</span>
+    </div>
+
+    <div class="content" id="content">
+        <p id="helloContent"></p>
+        <form id="commentForm"　style="display: none;">
+            <label for="comment">Your Comment:</label>
+            <textarea id="comment" name="comment" rows="4" cols="50"></textarea>
+        
+            <input type="button" value="Submit Comment" onclick="submitForm()">
+        </form>
+    </div>
+    
     <div class="footer container">
         <div class="row">
             <div class="col-md-12">
