@@ -48,3 +48,8 @@ nav ul li:hover::after{
 	top: 50%;
 	opacity: 1;
   }
+
+.menu nav ul li a {
+	text-decoration: none;
+	color: #777;
+  }
