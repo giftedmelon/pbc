@@ -64,6 +64,17 @@ nav ul li:hover::after{
 	flex-wrap: wrap;
   }
 
+p {
+	font-family:Impact;
+	font-size: 100px;
+	font-weight: 500;
+	color: #000000;
+	margin: 10px;
+	padding: 10px;
+	text-align: left;
+	line-height: 90px;
+  }
+
 .box{
     position:relative;
     height:200px;
