@@ -95,7 +95,8 @@ img{
   }
 
   .floating-container:hover {
-	height: 300px;
+	height: 410px;
+	width: 70px;
   }
 
   .floating-container:hover .floating-button {
@@ -103,16 +104,16 @@ img{
   }
 
   .floating-button {
-	position: absolute;
-	width: 45px;
-	height: 45px;
+	position: fixed;
+	width: 50px;
+	height: 50px;
 	background: #2cb3f0;
-	bottom: 0;
 	border-radius: 50%;
-	left:0;
-	right:0;
-	color:white;
-	line-height: 45px;
+	right: 20px; /* Adjust the right offset as needed */
+	top: 50%; /* Position the button at the vertical center of the page */
+	transform: translateY(-50%);
+	color: white;
+	line-height: 50px;
 	text-align: center;
 	font-size: 23px;
 	z-index: 100;
@@ -120,6 +121,10 @@ img{
 	cursor: pointer;
 	-webkit-transition: all 0.3s;
 	transition: all 0.3s;
+  }
+
+  .floating-button.slide-left {
+    right: 0;
   }
 
   .float-element {
