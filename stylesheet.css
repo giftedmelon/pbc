@@ -67,7 +67,7 @@ nav ul li:hover::after{
 	color: #777;
   }
 
-  .box{
+.box{
     position:relative;
     width:280px;
     height:96px;
