@@ -6,11 +6,6 @@
     justify-content: center;
   }
 
-.section {
-	margin-top: 20px;
-	height: 300px;
-	border: 1px solid #ddd;
-  }
 
 .menu{
 	width: 100%;
@@ -53,9 +48,6 @@ nav ul li::after{
 	opacity: 0;
   }
 
-nav ul li:hover{
-	color: #fff;
-  }
 
 nav ul li:hover::after{
 	top: 50%;
@@ -67,13 +59,17 @@ nav ul li:hover::after{
 	color: #777;
   }
 
+.row{
+	display: flex;
+	flex-wrap: wrap;
+  }
+
 .box{
     position:relative;
-    width:280px;
-    height:96px;
-    background-color:#fffbb6;
-    border:1px solid #ff6a00;
-}
+    height:200px;
+	aspect-ratio: 1/1;
+	transition: 0.5s;
+  }
 
 .box .Link{
     display: block;
