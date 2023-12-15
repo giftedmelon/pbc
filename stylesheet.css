@@ -79,3 +79,109 @@ nav ul li:hover::after{
     width: 100%;
     height: 100%;
 }
+
+.floating-container {
+	position: fixed;
+	width: 100px;
+	height: 100px;
+	bottom: 0;
+	right: 0;
+  }
+
+  .floating-container:hover {
+	height: 300px;
+  }
+
+  .floating-container:hover .floating-button {
+	box-shadow: 0 10px 25px rgba(44, 179, 240, 0.6);
+  }
+
+  .floating-button {
+	position: absolute;
+	width: 45px;
+	height: 45px;
+	background: #2cb3f0;
+	bottom: 0;
+	border-radius: 50%;
+	left:0;
+	right:0;
+	color:white;
+	line-height: 45px;
+	text-align: center;
+	font-size: 23px;
+	z-index: 100;
+	box-shadow: 0 10px 25px rgba(44, 179, 240, 0.6);
+	cursor: pointer;
+	-webkit-transition: all 0.3s;
+	transition: all 0.3s;
+  }
+
+  .float-element {
+	position: relative;
+	display: block;
+	border-radius: 50%;
+	width: 50px;
+	height: 50px;
+	margin: 15px 0;
+	color: white;
+	display: grid;
+	place-items: center;
+	z-index: 0;
+	opacity: 0;
+	cursor: pointer;
+  }
+
+  .float-element:nth-child(1) {
+	background:#42a5f5;
+	box-shadow: 0 20px 20px -10px rgba(66, 165, 245, 0.5);
+  }
+
+  .float-element:nth-child(2) {
+	background:#4caf50;
+	box-shadow: 0 20px 20px -10px rgba(76, 175, 80, 0.5);
+  }
+
+  .float-element:nth-child(3) {
+	background: #ff9800;;
+	box-shadow: 0 20px 20px -10px rgba(255, 152, 0, 0.5);
+  }
+
+  @-webkit-keyframes come-in {
+	0% {
+	  opacity: 0;
+	}
+	30% {
+		transform: translateX(-50px);
+	}
+	70% {
+		transform: translateX(0px) scale(1.2);
+	}
+	100% {
+		transform: scale(1);
+		opacity: 1;
+	}
+  }
+
+  .floating-container:hover .element-container .float-element:nth-child(1) {
+	animation: come-in 0.4s forwards 0.2s;
+  }
+
+  .floating-container:hover .element-container .float-element:nth-child(2) {
+	animation: come-in 0.4s forwards 0.4s;
+  }
+
+  .floating-container:hover .element-container .float-element:nth-child(3) {
+	animation: come-in 0.4s forwards 0.6s;
+  }
+  
+  .fab-content {
+	display: none;
+	position: fixed;
+	bottom: 80px;
+	right: 20px;
+	width: 200px;
+	background-color: #fff;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	padding: 20px;
+	border-radius: 8px;
+  }
