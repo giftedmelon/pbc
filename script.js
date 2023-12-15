@@ -21,4 +21,13 @@
         fabContent.style.display = 'block';
       }
     });
+
+    mainBtn.addEventListener('click', function () {
+      // Toggle the visibility of the fab content
+      if (fabContent.style.display === 'block') {
+        fabContent.style.display = 'none';
+      } 
+    });
   });
+
+  
