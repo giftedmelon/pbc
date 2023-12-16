@@ -17,7 +17,7 @@ header {
 	z-index: -3;
   }
 
-  .container-right{
+.container-right{
 	width: 100%;
 	height: auto;
     display: flex;
