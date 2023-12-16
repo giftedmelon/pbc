@@ -416,21 +416,19 @@ input:checked + .slider:before {
   .modal {
 	position: fixed;
 	top: 0;
-	right: 0;
+	right: -100%; /* Start off-screen */
 	bottom: 0;
-	left: 0;
-	background: rgba(0, 0, 0, 0.5);
-	display: none;
-	justify-content: center;
-	align-items: center;
-	z-index: 1001; /* Set a higher z-index than #floating-window */
+	width: 80%; /* Adjust the width as needed */
+	background: #fff;
+	box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+	z-index: 1001;
+	transition: right 0.3s ease-in-out;
+	overflow-y: auto; /* Enable vertical scrolling if content exceeds modal height */
   }
 
   .modal-content {
-	background: #fff;
 	padding: 20px;
 	border-radius: 5px;
-	width: 300px;
   }
 
   .modal-content label {
@@ -454,4 +452,9 @@ input:checked + .slider:before {
 
   .modal-content button:hover {
 	background-color: #0056b3;
+  }
+
+  /* Show the modal when it's open */
+  .modal.open {
+	right: 0;
   }

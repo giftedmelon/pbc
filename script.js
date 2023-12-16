@@ -133,11 +133,13 @@
   }
 
   function showCommentModal() {
-    document.getElementById('comment-modal').style.display = 'flex';
+    var commentModal = document.getElementById('comment-modal');
+    commentModal.classList.add('open'); // Add the 'open' class to show the modal
   }
 
   function closeCommentModal() {
-    document.getElementById('comment-modal').style.display = 'none';
+    var commentModal = document.getElementById('comment-modal');
+    commentModal.classList.remove('open'); // Remove the 'open' class to hide the modal
   }
 
   function submitComment() {
@@ -160,5 +162,3 @@
     range.deleteContents();
     range.insertNode(span);
   }
-
-  
