@@ -10,6 +10,7 @@ header {
 	width: 20%;
 	height: auto;
 	display: flex;
+	flex:auto;
 	justify-content: center;
   }
 
@@ -19,27 +20,9 @@ header {
     display: flex;
     justify-content: center;
 	margin-left: 10px;
+	flex:auto;
   }
 
-.landing {
-	display: flex;
-	align-items: flex-end;
-}
-.container-left{
-	width: 100%;
-	height: auto;
-    display: flex;
-	justify-content: center;
-	z-index: -3;
-  }
-
-.container-right{
-	width: 100%;
-	height: auto;
-    display: flex;
-	justify-content: center;
-	z-index: -3;
-  }
 
 ul {
 	font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
@@ -88,10 +71,33 @@ nav ul li:hover::after{
 	opacity: 1;
   }
 
+
 .menu nav ul li a {
 	text-decoration: none;
 	color: #777;
   }
+
+.landing {
+	display: flex;
+	align-items: flex-end;
+}
+.container-left{
+	width: 100%;
+	height: auto;
+    display: flex;
+	justify-content: center;
+	z-index: -3;
+  }
+
+.container-right{
+	width: 100%;
+	height: auto;
+    display: flex;
+	justify-content: center;
+	z-index: -3;
+  }
+
+
 
 .row{
 	display: flex;
