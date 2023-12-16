@@ -12,22 +12,22 @@ header {
 	display: flex;
 	flex:auto;
 	justify-content: center;
-}
+  }
 
 .menu{
 	width: 80%;
 	height: auto;
-	display: flex;
-	justify-content: center;
+    display: flex;
+    justify-content: center;
 	margin-left: 10px;
 	flex:auto;
   }
+
 
 ul {
 	font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 	font-size: 50px;
 }
-
 
 
 nav{
@@ -70,6 +70,7 @@ nav ul li:hover::after{
 	top: 50%;
 	opacity: 1;
   }
+
 
 .menu nav ul li a {
 	text-decoration: none;
