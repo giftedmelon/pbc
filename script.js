@@ -9,26 +9,26 @@
     });
   });
 
-  document.addEventListener('DOMContentLoaded', function () {
-    var fabBtn = document.getElementById('fabBtn');
-    var fabContent = document.getElementById('fabContent');
+  //document.addEventListener('DOMContentLoaded', function () {
+    //var fabBtn = document.getElementById('fabBtn');
+    //var fabContent = document.getElementById('fabContent');
   
-    fabBtn.addEventListener('click', function () {
+    //fabBtn.addEventListener('click', function () {
       // Toggle the visibility of the fab content
-      if (fabContent.style.display === 'block') {
-        fabContent.style.display = 'none';
-      } else {
-        fabContent.style.display = 'block';
-      }
-    });
+      //if (fabContent.style.display === 'block') {
+        //fabContent.style.display = 'none';
+      //} else {
+        //fabContent.style.display = 'block';
+      //}
+    //});
 
-    mainBtn.addEventListener('click', function () {
-      // Toggle the visibility of the fab content
-      if (fabContent.style.display === 'block') {
-        fabContent.style.display = 'none';
-      } 
-    });
-  });
+  //   mainBtn.addEventListener('click', function () {
+  //     // Toggle the visibility of the fab content
+  //     if (fabContent.style.display === 'block') {
+  //       fabContent.style.display = 'none';
+  //     } 
+  //   });
+  // });
 
   function submitForm() {
     var comment = document.getElementById("comment").value;
@@ -72,11 +72,11 @@
   }
 
 
-  document.addEventListener('DOMContentLoaded', function() {
+  //document.addEventListener('DOMContentLoaded', function() {
     // Hide the comment form initially
-    var commentForm = document.getElementById("commentForm");
-    commentForm.style.display = "none";
-  })
+    //var commentForm = document.getElementById("commentForm");
+    //commentForm.style.display = "none";
+  //})
 
   function toggleContent() {
     var content = document.getElementById("content");
@@ -103,6 +103,7 @@
   document.addEventListener('selectionchange', function () {
       var selectedText = getSelectedText();
       if (selectedText) {
+        // console.log('Selected Text:', selectedText);
         showFloatingWindow(selectedText);
       } else {
         hideFloatingWindow();
@@ -119,7 +120,9 @@
     }
 
     function showFloatingWindow(selectedText) {
+      // console.log("Show floating window");
       var floatingWindow = document.getElementById('floating-window');
+      console.log(floatingWindow);
       var selection = window.getSelection();
 
       if (selection.rangeCount > 0) {
