@@ -89,31 +89,6 @@ nav ul li:hover::after{
 	z-index: -3;
   }
 
-.container-right{
-	width: 100%;
-	height: auto;
-    display: flex;
-	justify-content: center;
-	z-index: -3;
-  }
-
-
-
-.row{
-	display: flex;
-	flex-wrap: wrap;
-  }
-
-h1 {
-	font-family:Impact;
-	font-size: 40px;
-	color: #000000;
-	margin: 10px;
-	padding: 10px;
-	text-align: left;
-	line-height: 90px;
-  }
-
 p {
 	font-family:Impact;
 	font-size: 100px;
@@ -125,22 +100,47 @@ p {
 	line-height: 90px;
   }
 
+.container-right{
+	width: 100%;
+	height: auto;
+    display: flex;
+	justify-content: center;
+	z-index: -3;
+  }
+
 .section {
 	width: 100%;
 	height: auto;
 	display: flex;
-	align-items: center;
 	justify-content: center;
+	position: relative;
+	padding: 10% 10%;
+  }
+
+h1 {
+	font-family:Impact;
+	font-size: 40px;
+	color: #000000;
+	margin: 10px;
+	padding: 10px;
+	text-align: center;
+	line-height: 90px;
+	position: absolute;
   }
 
 .contaiter {
-	display: flex;
 	align-items: center;
+	position: absolute;
+	padding-top: 10px;
   }  
 
+.row{
+	display: flex;
+	flex-wrap: wrap;
+  }
 
 .box{
-    position:relative;
+    position: relative;
     height:200px;
 	transition: 0.5s;
   }
