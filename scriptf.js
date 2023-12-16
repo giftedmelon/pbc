@@ -8,9 +8,12 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       });
     });
   });
-
-function submitForm() {
+/////////////////////////////////
+  function submitForm() {
     var comment = document.getElementById("comment").value;
+    var option1 = document.getElementById("option1").checked;
+    var option2 = document.getElementById("option2").checked;
+    var option3 = document.getElementById("option3").checked;
     var currentDate = new Date();
     //var currentTime = currentDate.toISOString();
   
@@ -19,17 +22,18 @@ function submitForm() {
       return;
     }
 
-    console.log(currentDate);
+    console.log(window.location.href);
   
     var formData = new FormData();
     formData.append("comment", comment);
-    formData.append("option1", "sample");
-    formData.append("option2", "sample");
-    formData.append("option3", "sample");
+    formData.append("option1", option1);
+    formData.append("option2", option2);
+    formData.append("option3", option3);
     formData.append("submissionTime", currentDate);
+    formData.append("pageURL", window.location.href);
   
     var xhr = new XMLHttpRequest();
-    xhr.open("POST", "https://script.google.com/macros/s/AKfycbwSE0PJI4p3CEMdL-i_jz6wkY7abT6WsB3L3U47GTJoTtBjkTjnDgJfvjfSoSAcWwK-/exec", true);
+    xhr.open("POST", "https://script.google.com/macros/s/AKfycbzQxViYgdCkVLaUwEUlvbMGyqcY8UYOY02e2aHyhnFwC3pKvERg6BwkNgyvUilGXj6W/exec", true);
     xhr.onreadystatechange = function () {
         if (xhr.readyState === 4) {
           if (xhr.status === 200) {
@@ -46,46 +50,6 @@ function submitForm() {
     // Close the modal
     closeCommentModal();
   }
-
-////////////////////////////////////////
-
-function submitForm() {
-  var comment = document.getElementById("comment").value;
-  var currentDate = new Date();
-  //var currentTime = currentDate.toISOString();
-
-  if (comment.trim() === "") {
-    alert("Please enter a comment.");
-    return;
-  }
-
-  console.log(currentDate);
-
-  var formData = new FormData();
-  formData.append("comment", comment);
-  formData.append("option1", "sample");
-  formData.append("option2", "sample");
-  formData.append("option3", "sample");
-  formData.append("submissionTime", currentDate);
-
-  var xhr = new XMLHttpRequest();
-  xhr.open("POST", "https://script.google.com/macros/s/AKfycbwSE0PJI4p3CEMdL-i_jz6wkY7abT6WsB3L3U47GTJoTtBjkTjnDgJfvjfSoSAcWwK-/exec", true);
-  xhr.onreadystatechange = function () {
-      if (xhr.readyState === 4) {
-        if (xhr.status === 200) {
-          alert("Comment submitted successfully!");
-          document.getElementById("comment-form").reset();
-        } else {
-          console.error("Error: Unable to submit comment", xhr.responseText);
-        }
-      }
-    };
-
-  xhr.send(formData);
-
-  // Close the modal
-  closeCommentModal();
-}
 
 /////////////////////////////////////////////////
 
