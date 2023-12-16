@@ -2,7 +2,23 @@ header {
 	background: #fff;
 	padding: 10px 40px;
 	display: flex;
-	align-items: end;
+	align-items: flex-end;
+  }
+
+.logo {
+	width: 100%;
+	height: auto;
+	display: flex;
+	justify-content: center;
+	margin-right: 10px;
+  }
+
+.menu{
+	width: 100%;
+	height: auto;
+    display: flex;
+    justify-content: center;
+	margin-left: 10px;
   }
 
 .landing {
@@ -23,13 +39,6 @@ header {
     display: flex;
 	justify-content: center;
 	z-index: -3;
-  }
-
-.menu{
-	width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
   }
 
 ul {
@@ -114,7 +123,7 @@ p {
 	display: flex;
 	align-items: center;
   }  
-  
+
 
 .box{
     position:relative;
