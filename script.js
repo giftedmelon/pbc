@@ -32,6 +32,11 @@
 
   function submitForm() {
     var comment = document.getElementById("comment").value;
+    var option1 = document.getElementById("option1").checked;
+    var option2 = document.getElementById("option2").checked;
+    var option3 = document.getElementById("option3").checked;
+
+    console.log(option1);
   
     if (comment.trim() === "") {
       alert("Please enter a comment.");
@@ -40,9 +45,12 @@
   
     var formData = new FormData();
     formData.append("comment", comment);
+    formData.append("option1", option1);
+    formData.append("option2", option2);
+    formData.append("option3", option3);
   
     var xhr = new XMLHttpRequest();
-    xhr.open("POST", "https://script.google.com/macros/s/AKfycbygLOAslc6EapkwoINOiVH_ZG9CbpbqgGp88EwKMUU2jcH6nF4FiILvmlz0J_YooHsV/exec", true);
+    xhr.open("POST", "https://script.google.com/macros/s/AKfycbxpMMf3zYDWSy8QmZaobwHCOdC9OZPivN3UBvtcQ2UIM7I7Wyo1U9iTawsakMAgBFpC/exec", true);
     xhr.onreadystatechange = function () {
         if (xhr.readyState === 4) {
           if (xhr.status === 200) {
