@@ -2,15 +2,18 @@ header {
 	background: #fff;
 	padding: 10px 40px;
 	display: flex;
-	align-items: center;
+	align-items: end;
   }
 
+.landing {
+	display: flex;
+	align-items: flex-end;
+}
 .container-left{
 	width: 100%;
 	height: auto;
     display: flex;
-    align-items: flex-start;
-    justify-content: center;
+	justify-content: center;
 	z-index: -3;
   }
 
@@ -18,8 +21,7 @@ header {
 	width: 100%;
 	height: auto;
     display: flex;
-    align-items: flex-end;
-    justify-content: center;
+	justify-content: center;
 	z-index: -3;
   }
 
@@ -107,6 +109,12 @@ p {
 	text-align: left;
 	line-height: 90px;
   }
+
+.contaiter {
+	display: flex;
+	align-items: center;
+  }  
+  
 
 .box{
     position:relative;
