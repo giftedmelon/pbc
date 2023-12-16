@@ -38,6 +38,27 @@
             <!-- Add more content as needed -->
         </div>
 
+        <div id="floating-window">
+            <button id="comment-button">Comment</button>
+            <button id="highlight-button">Highlight</button>
+        </div>
+        
+        <div id="comment-modal" class="modal">
+            <div class="modal-content">
+              <span onclick="closeCommentModal()" style="cursor: pointer; float: right;">&times;</span>
+              <p>Select options:</p>
+              <label><input type="checkbox" name="option1"> Option 1</label>
+              <label><input type="checkbox" name="option2"> Option 2</label>
+              <label><input type="checkbox" name="option3"> Option 3</label>
+              <form id="comment-form"　style="display: none;">
+                <label for="comment">Your Comment:</label>
+                <textarea id="comment" name="comment" rows="4" cols="50"></textarea>
+            
+                <input type="button" value="Submit Comment" onclick="submitForm()">
+            </form>
+            </div>
+        </div>
+
         <div class="moose container">
             <h1>MOOSE</h1>
             <p>
@@ -51,23 +72,6 @@
     
 </body>
 <footer>
-    <div class="toggle-switch" id="toggleSwitch" onclick="toggleContent()">
-        <label class="switch">
-          <input type="checkbox">
-          <span class="slider round"></span>
-        </label>
-        <span id="modeText">Edit Mode</span>
-    </div>
-
-    <div class="content" id="content">
-        <p id="helloContent"></p>
-        <form id="commentForm"　style="display: none;">
-            <label for="comment">Your Comment:</label>
-            <textarea id="comment" name="comment" rows="4" cols="50"></textarea>
-        
-            <input type="button" value="Submit Comment" onclick="submitForm()">
-        </form>
-    </div>
     <div class="footer container">
         <div class="row">
             <div class="col-md-12">

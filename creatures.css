@@ -390,3 +390,59 @@ input:checked + .slider:before {
 	  .content {
 		margin-top: 20px;
 	  }
+
+	  #floating-window {
+		position: fixed;
+		display: none;
+		background-color: #fff;
+		border: 1px solid #ccc;
+		padding: 10px;
+		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+		z-index: 1000;
+	  }
+	
+	  .modal {
+		position: fixed;
+		top: 0;
+		right: -100%; /* Start off-screen */
+		bottom: 0;
+		width: 80%; /* Adjust the width as needed */
+		background: #fff;
+		box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+		z-index: 1001;
+		transition: right 0.3s ease-in-out;
+		overflow-y: auto; /* Enable vertical scrolling if content exceeds modal height */
+	  }
+	
+	  .modal-content {
+		padding: 20px;
+		border-radius: 5px;
+	  }
+	
+	  .modal-content label {
+		display: block;
+		margin-bottom: 10px;
+	  }
+	
+	  .modal-content textarea {
+		width: 100%;
+		padding: 10px;
+		margin-bottom: 10px;
+	  }
+	
+	  .modal-content button {
+		background-color: #007bff;
+		color: #fff;
+		border: none;
+		padding: 10px;
+		cursor: pointer;
+	  }
+	
+	  .modal-content button:hover {
+		background-color: #0056b3;
+	  }
+	
+	  /* Show the modal when it's open */
+	  .modal.open {
+		right: 0;
+	  }

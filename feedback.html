@@ -50,9 +50,12 @@
               <label><input type="checkbox" name="option1"> Option 1</label>
               <label><input type="checkbox" name="option2"> Option 2</label>
               <label><input type="checkbox" name="option3"> Option 3</label>
-              <label for="comment">Write a comment:</label>
-              <textarea id="comment" placeholder="Type your comment here..."></textarea>
-              <button onclick="submitComment()">Submit</button>
+              <form id="comment-form"　style="display: none;">
+                <label for="comment">Your Comment:</label>
+                <textarea id="comment" name="comment" rows="4" cols="50"></textarea>
+            
+                <input type="button" value="Submit Comment" onclick="submitForm()">
+            </form>
             </div>
         </div>
 
@@ -70,19 +73,19 @@
                        <div class="col-md-4">
                            <div class="box">
                                <img src="img/shoebill_box_done.png" alt="shoebill">
-                               <a class ="Link" href="shoebill.html"></a>
+                               <a class ="Link" href="shoebill_f.html"></a>
                            </div>
                        </div>
                        <div class="col-md-4">
                            <div class="box">
                                <img src="img/pallas'scat_box_done.png" alt="pallas's cat">
-                               <a class ="Link" href="pallas'scat.html"></a>
+                               <a class ="Link" href="pallas'scat_f.html"></a>
                            </div>
                        </div>
                        <div class="col-md-4">
                            <div class="box">
                                <img src="img/owl_box_done.png" alt="great horned owl">
-                               <a class ="Link" href="owl.html"></a>
+                               <a class ="Link" href="owl_f.html"></a>
                            </div>
                        </div>
                    </div>
@@ -90,19 +93,19 @@
                        <div class="col-md-4">
                                <div class="box">
                                    <img src="img/shcattle_box_done.png" alt="scottish highland cattle">
-                                   <a class ="Link" href="shcattle.html"></a>
+                                   <a class ="Link" href="shcattle_f.html"></a>
                                </div>
                        </div>
                        <div class="col-md-4">
                                <div class="box">
                                    <img src="img/sloth_box_done.png" alt="sloth">
-                                   <a class ="Link" href="sloth.html"></a>
+                                   <a class ="Link" href="sloth_f.html"></a>
                                </div>
                        </div>
                        <div class="col-md-4">
                                <div class="box">
                                    <img src="img/moose_box_done.png" alt="moose">
-                                   <a class ="Link" href="moose.html"></a>
+                                   <a class ="Link" href="moose_f.html"></a>
                                </div>
                        </div>
                    </div>
@@ -110,19 +113,19 @@
                        <div class="col-md-4">
                                <div class="box">
                                    <img src="img/iguana_box_done.png" alt="iguana">
-                                   <a class ="Link" href="iguana.html"></a>
+                                   <a class ="Link" href="iguana_f.html"></a>
                                </div>
                        </div>
                        <div class="col-md-4">
                                <div class="box">
                                    <img src="img/clam_box_done.png" alt="clam">
-                                   <a class ="Link" href="clam.html"></a>
+                                   <a class ="Link" href="clam_f.html"></a>
                                </div>
                        </div>
                        <div class="col-md-4">
                                <div class="box">
                                    <img src="img/shoebill_box_done.png" alt="shoebill">
-                                   <a class ="Link" href="shoebill.html"></a>
+                                   <a class ="Link" href="shoebill_f.html"></a>
                                    </div>
                        </div>
                    </div>
@@ -130,19 +133,19 @@
                        <div class="col-md-4">
                                <div class="box">
                                    <img src="img/pallas'scat_box_done.png" alt="pallas's cat">
-                                   <a class ="Link" href="pallas'scat.html"></a>
+                                   <a class ="Link" href="pallas'scat_f.html"></a>
                                    </div>
                        </div>
                        <div class="col-md-4">
                                <div class="box">
                                    <img src="img/wombat_box_done.png" alt="wombat">
-                                   <a class ="Link" href="wombat.html"></a>
+                                   <a class ="Link" href="wombat_f.html"></a>
                                    </div>
                        </div>
                        <div class="col-md-4">
                                <div class="box">
                                    <img src="img/shcattle_box_done.png" alt="scottish highland cattle">
-                                   <a class ="Link" href="shcattle.html"></a>
+                                   <a class ="Link" href="shcattle_f.html"></a>
                                </div>
                        </div>
                    </div>
@@ -161,24 +164,6 @@
         </div>
         </main>
     <footer>
-        <div class="toggle-switch" id="toggleSwitch" onclick="toggleContent()">
-            <label class="switch">
-              <input type="checkbox">
-              <span class="slider round"></span>
-            </label>
-            <span id="modeText">Edit Mode</span>
-        </div>
-
-        <div class="content" id="content">
-            <p id="helloContent"></p>
-            <form id="commentForm"　style="display: none;">
-                <label for="comment">Your Comment:</label>
-                <textarea id="comment" name="comment" rows="4" cols="50"></textarea>
-            
-                <input type="button" value="Submit Comment" onclick="submitForm()">
-            </form>
-        </div>
-
         <div class="footer container">
             <div class="row">
                 <div class="col-md-12">

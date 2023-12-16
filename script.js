@@ -47,7 +47,7 @@
         if (xhr.readyState === 4) {
           if (xhr.status === 200) {
             alert("Comment submitted successfully!");
-            document.getElementById("commentForm").reset();
+            document.getElementById("comment-form").reset();
           } else {
             console.error("Error: Unable to submit comment", xhr.responseText);
           }
@@ -55,6 +55,9 @@
       };
   
     xhr.send(formData);
+
+    // Close the modal
+    closeCommentModal();
   }
 
 

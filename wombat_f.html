@@ -38,6 +38,27 @@
             <!-- Add more content as needed -->
         </div>
 
+        <div id="floating-window">
+            <button id="comment-button">Comment</button>
+            <button id="highlight-button">Highlight</button>
+        </div>
+        
+        <div id="comment-modal" class="modal">
+            <div class="modal-content">
+              <span onclick="closeCommentModal()" style="cursor: pointer; float: right;">&times;</span>
+              <p>Select options:</p>
+              <label><input type="checkbox" name="option1"> Option 1</label>
+              <label><input type="checkbox" name="option2"> Option 2</label>
+              <label><input type="checkbox" name="option3"> Option 3</label>
+              <form id="comment-form"　style="display: none;">
+                <label for="comment">Your Comment:</label>
+                <textarea id="comment" name="comment" rows="4" cols="50"></textarea>
+            
+                <input type="button" value="Submit Comment" onclick="submitForm()">
+            </form>
+            </div>
+        </div>
+
         <div class="wombat container">
             <h1>Wombat</h1>
             <p>
