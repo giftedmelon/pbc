@@ -7,7 +7,7 @@ header {
 
 .container-left{
 	width: 100%;
-	height: 100vh;
+	height: auto;
     display: flex;
     align-items: flex-start;
     justify-content: center;
@@ -16,7 +16,7 @@ header {
 
   .container-right{
 	width: 100%;
-	height: 100vh;
+	height: auto;
     display: flex;
     align-items: flex-end;
     justify-content: center;
