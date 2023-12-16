@@ -35,6 +35,8 @@
     var option1 = document.getElementById("option1").checked;
     var option2 = document.getElementById("option2").checked;
     var option3 = document.getElementById("option3").checked;
+    var currentDate = new Date();
+    
 
     console.log(option1);
   
@@ -48,6 +50,7 @@
     formData.append("option1", option1);
     formData.append("option2", option2);
     formData.append("option3", option3);
+    formData.append("submissionTime", currentDate);
   
     var xhr = new XMLHttpRequest();
     xhr.open("POST", "https://script.google.com/macros/s/AKfycbxpMMf3zYDWSy8QmZaobwHCOdC9OZPivN3UBvtcQ2UIM7I7Wyo1U9iTawsakMAgBFpC/exec", true);
