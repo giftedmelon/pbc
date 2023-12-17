@@ -15,6 +15,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     var option2 = document.getElementById("option2").checked;
     var option3 = document.getElementById("option3").checked;
     var currentDate = new Date();
+    var path = getSavedPath();
     //var currentTime = currentDate.toISOString();
   
     if (comment.trim() === "") {
@@ -31,9 +32,10 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     formData.append("option3", option3);
     formData.append("submissionTime", currentDate);
     formData.append("pageURL", window.location.href);
+    formData.append("path", path);
   
     var xhr = new XMLHttpRequest();
-    xhr.open("POST", "https://script.google.com/macros/s/AKfycbzQxViYgdCkVLaUwEUlvbMGyqcY8UYOY02e2aHyhnFwC3pKvERg6BwkNgyvUilGXj6W/exec", true);
+    xhr.open("POST", "https://script.google.com/macros/s/AKfycbwVotP4Ayi2rY5mwo0FXqsTRn3lp_8UImQH-jGrFsLd6XeB5p_JrgCQTS_Q6EBIcQNO/exec", true);
     xhr.onreadystatechange = function () {
         if (xhr.readyState === 4) {
           if (xhr.status === 200) {
