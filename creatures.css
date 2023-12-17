@@ -82,6 +82,12 @@ nav ul li:hover::after{
 	z-index: -3;
   }
 
+.letters {
+	width: 100%;
+	height: auto;
+	text-align: left;
+  }
+
 h1{
 	font-family:Impact;
 	font-size: 100px;
@@ -440,4 +446,12 @@ input:checked + .slider:before {
 	  /* Show the modal when it's open */
 	  .modal.open {
 		right: 0;
+	  }
+
+	  footer {
+		font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+		padding: 2rem;
+		font-size: 15px;
+		color: #999;
+		background: #fff;
 	  }
