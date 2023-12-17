@@ -66,31 +66,39 @@ function getSelectedText() {
 
 function getPathFromElement(element) {
   var stack = [];
+
   while (element.parentNode != document.documentElement) {
       var sibCount = 0;
       var sibIndex = 0;
       var childNodes = element.parentNode.childNodes;
-      var childlength = childNodes.length;
+      var childLength = childNodes.length;
 
-      for(var i = 0; i < childlength; i++) {
+      for (var i = 0; i < childLength; i++) {
           var sib = childNodes[i];
+
           if (sib.nodeName == element.nodeName) {
               if (sib === element) {
                   sibIndex = sibCount;
               }
+
               sibCount++;
           }
       }
-      if (element.hasAttribute('id') && element.id != '') {
-          stack.unshift('$element.nodeName.toLowerCase()#${element.id}');
-      } else if (sibCount > 1) {
-          stack.unshift('${element.nodeName.toLowerCase()}: eq(${sibIndex})');
-      } else {
+
+      if (element.hasAttribute("id") && element.id !== "") {
+          stack.unshift(`*[@id="${element.id}"]`);
+      }
+      else if (sibCount > 1) {
+          stack.unshift(`${element.nodeName.toLowerCase()}[${sibIndex + 1}]`);
+      }
+      else {
           stack.unshift(element.nodeName.toLowerCase());
       }
+
       element = element.parentNode;
   }
-  return stack.join(' > ');
+
+  return "//" + stack.join("/")
 }
 
 function savePath(path) {
