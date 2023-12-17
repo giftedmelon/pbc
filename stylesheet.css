@@ -104,12 +104,10 @@ p {
 	z-index: -3;
   }
 
-.section {
-	display: inline-block;
-	justify-content: center;
-	position: relative;
-	padding: 10% 10%;
-  }
+.yuma {
+	display: grid;
+}
+
 
 h1 {
 	font-family:Impact;
@@ -119,6 +117,7 @@ h1 {
 	padding: 1em;
 	text-align: center;
   }
+
 
 .container {
 	align-items: stretch;
