@@ -1,3 +1,7 @@
+.link-disabled {
+    pointer-events: none;
+}
+
 header {
 	width: 100%;
 	background: #fff;
