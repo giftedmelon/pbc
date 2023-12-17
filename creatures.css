@@ -98,6 +98,15 @@ h1{
     justify-content: left;
   }
 
+h2 {
+	font-family:Impact;
+	font-size: 30px;
+	font-weight: 700;
+	color: #0d0d0d;
+	margin-bottom: 20px;
+	justify-content: left;
+  }
+
 p {
     font-family:'Segoe UI', sans-serif;
     font-size: 20px;
