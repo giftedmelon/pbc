@@ -23,7 +23,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       return;
     }
 
-    console.log(window.location.href);
+    console.log(path);
   
     var formData = new FormData();
     formData.append("comment", comment);
@@ -127,9 +127,11 @@ document.addEventListener('click', function(event) {
   } else {
     hideFloatingWindow();
   }
-  console.log('path', path);
-  console.log('event.target', event);
-  savePath(path);
+  // console.log('event.target', event);
+  if (event.target.id != 'floating-window' && event.target.id != 'comment-button' && event.target.id != 'highlight-button' && event.target.id != 'comment-modal' && event.target.id != 'comment' && event.target.id != 'submit-button' && event.target.id != 'option1' && event.target.id != 'option2' && event.target.id != 'option3'&& event.target.id != 'comment-form'&& event.target.closest("#comment-modal") == null) {
+    savePath(path);
+    console.log('Path:', path);
+  }
 });
 
 
