@@ -93,6 +93,15 @@ function getPathFromElement(element) {
   return stack.join(' > ');
 }
 
+function savePath(path) {
+  localStorage.setItem('savedPath', path);
+}
+
+// Function to get the saved path from localStorage
+function getSavedPath() {
+  return localStorage.getItem('savedPath');
+}
+
 document.addEventListener('selectionchange', function () {
   var selectedText = getSelectedText();
   if (selectedText) {
@@ -112,6 +121,7 @@ document.addEventListener('click', function(event) {
   }
   console.log('path', path);
   console.log('event.target', event);
+  savePath(path);
 });
 
 
