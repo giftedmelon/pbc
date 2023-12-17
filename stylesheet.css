@@ -120,7 +120,7 @@ h1 {
 	text-align: center;
   }
 
-.contaiter {
+.container {
 	align-items: stretch;
 	position: absolute;
 	padding: 2px 4px;
@@ -159,7 +159,7 @@ img{
 	width: 100px;
 	height: 100px;
 	bottom: 0;
-	right: 20px;
+	right: -40px;
 	top: 50%;
   }
 
